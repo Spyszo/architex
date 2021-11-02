@@ -6,7 +6,7 @@ let smallHeader = false
 
 document.addEventListener('scroll', function(e) {
 
-    if(window.scrollY > 70) smallHeader = true
+    if(window.scrollY > 70 && window.innerWidth > 680) smallHeader = true
     else smallHeader = false
 
 
@@ -15,6 +15,11 @@ document.addEventListener('scroll', function(e) {
   
 
 });
+
+document.getElementsByClassName('mobile_switch')[0].addEventListener("click", (e)=> {
+    document.getElementsByClassName('mobile_switch')[0].classList.toggle("active")
+    document.getElementsByClassName('mobile_nav')[0].classList.toggle("active")
+})
 
 
 setTimeout(()=>{
